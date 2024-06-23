@@ -18,4 +18,13 @@ for i = 1:num_samples
     disp(['Sending CAN message with ID: 0x', dec2hex(can_message.ID), ', Data: ', num2str(data(i))]);
     
     pause(sample_time);
+    
+    figure(1);
+    plot3(t(1:i), data_sine(1:i), data_square(1:i), 'b');
+    xlabel('Time (s)');
+    ylabel('Sine Wave');
+    zlabel('Square Wave');
+    title('Simulated CAN Signal in ECU');
+    grid on;
+    drawnow;
 end
