@@ -44,6 +44,7 @@ where:
 - \( K_d \) is the derivative gain.
 - \( e(t) \) is the error signal.
 
+
 ## How to Use
 
 1. **Clone the repo**:
