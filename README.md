@@ -63,7 +63,7 @@ where:
     ```
 
 3. **Run the MATLAB script**:
-    Open `ECU_CAN_Simulation.m` in MATLAB and hit run. Sit back and watch the magic happen.
+    Open `can.m` in MATLAB and hit run. Sit back and watch the magic happen.
 
 ## Dependencies
 
