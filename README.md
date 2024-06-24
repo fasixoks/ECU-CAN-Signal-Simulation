@@ -63,7 +63,7 @@ where:
     ```
 
 3. **Run the MATLAB script**:
-    Open `can.m` in MATLAB and hit run. Sit back and watch the magic happen.
+    Open `can.m` (https://github.com/fasixoks/ECU-CAN-Signal-Simulation/blob/main/can.m) in MATLAB and hit run. Sit back and watch the magic happen.
 
 ## Dependencies
 
