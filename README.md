@@ -15,34 +15,36 @@ Welcome to the ECU CAN Signal Simulation repo! This project is all about simulat
 ## Mathematical Equations
 
 ### Signal Generation
-The combined signal \( y(t) \) is generated as:
-\[ y(t) = A \sin(2 \pi f t) + B \cdot \text{square}(2 \pi f t) + N(0, \sigma^2) \]
+The combined signal y(t) is generated as:
+y(t) = A * sin(2 * pi * f * t) + B * square(2 * pi * f * t) + N(0, sigma^2)
 where:
-- \( A \) is the amplitude of the sine wave.
-- \( f \) is the frequency.
-- \( B \) is the offset for the square wave.
-- \( N(0, \sigma^2) \) represents Gaussian noise with zero mean and variance \( \sigma^2 \).
+- A is the amplitude of the sine wave.
+- f is the frequency of the sine wave.
+- B is the offset of the square wave.
+- N(0, sigma^2) represents Gaussian noise with mean 0 and variance sigma^2.
 
 ### Low-Pass Filtering
-A Butterworth low-pass filter is designed and applied:
-\[ H(s) = \frac{b_0 + b_1 s + b_2 s^2}{a_0 + a_1 s + a_2 s^2} \]
+A 2nd order Butterworth low-pass filter is applied to the signal:
+H(s) = (b0 + b1 * s + b2 * s^2) / (a0 + a1 * s + a2 * s^2)
 
-### Fourier Transform
-The frequency domain representation is obtained using the Fast Fourier Transform (FFT):
-\[ Y(f) = \sum_{n=0}^{N-1} y(t) e^{-j 2 \pi f t} \]
+where j is the imaginary unit.
 
 ### RMS Calculation
-The Root Mean Square (RMS) value is calculated as:
-\[ \text{RMS} = \sqrt{\frac{1}{N} \sum_{n=1}^{N} y(t_n)^2} \]
+The Root Mean Square (RMS) value of the signal y(t) is calculated as:
+RMS = sqrt((1 / N) * sum(y(t_n)^2))
+
+where N is the number of samples.
 
 ### PID Controller
-The PID control law is implemented as:
-\[ u(t) = K_p e(t) + K_i \int e(t) dt + K_d \frac{d e(t)}{dt} \]
+The PID controller output u(t) is determined by:
+u(t) = Kp * e(t) + Ki * integral(e(t)) + Kd * derivative(e(t))
+
 where:
-- \( K_p \) is the proportional gain.
-- \( K_i \) is the integral gain.
-- \( K_d \) is the derivative gain.
-- \( e(t) \) is the error signal.
+- Kp is the proportional gain.
+- Ki is the integral gain.
+- Kd is the derivative gain.
+- e(t) is the error signal.
+
 
 
 ## How to Use
