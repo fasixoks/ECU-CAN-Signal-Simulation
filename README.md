@@ -11,6 +11,9 @@ Welcome to the ECU CAN Signal Simulation repo! This project is all about simulat
 - **PID Controller**: Implements a PID controller to mimic control systems in ECUs.
 - **Real-Time Visualization**: Updates a 3D plot dynamically to show the signal components over time.
 - **CAN Message Simulation**: Constructs and prints out simulated CAN messages for a bit of realism.
+## Screenshots
+![Capture](https://github.com/fasixoks/ECU-CAN-Signal-Simulation/assets/126894089/1bedc604-f807-4b4a-bd36-0f65fa5374aa)
+![Capture1](https://github.com/fasixoks/ECU-CAN-Signal-Simulation/assets/126894089/7b9596f5-614d-4851-937d-4273561796b1)
 
 ## Mathematical Equations
 
